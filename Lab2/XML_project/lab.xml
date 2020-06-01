@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE maternity_hospital
+        [
+                <!ELEMENT maternity_hospital (mother+)>
+                <!ELEMENT mother (full_name,birthday,number_hospital_room,childs)>
+                <!ATTLIST mother id CDATA #REQUIRED>
+                <!ELEMENT full_name (surname,name)>
+                <!ELEMENT surname (#PCDATA)>
+                <!ELEMENT name (#PCDATA)>
+                <!ELEMENT birthday (#PCDATA)>
+                <!ELEMENT number_hospital_room (#PCDATA)>
+                <!ELEMENT childs (nameChild|birthdayChild)+>
+                <!ELEMENT nameChild (#PCDATA)>
+                <!ELEMENT birthdayChild (#PCDATA)>
+        ]>
+
+
+<maternity_hospital>
+    <mother id="1">
+        <full_name>
+            <surname>Ivanova</surname>
+            <name>Ekaterina</name>
+        </full_name>
+        <birthday>12.05.1990</birthday>
+        <number_hospital_room>1</number_hospital_room>
+        <childs>
+            <nameChild>Ivan</nameChild>
+            <birthdayChild>29.02.2008</birthdayChild>
+
+            <nameChild>Nikita</nameChild>
+            <birthdayChild>29.02.2008</birthdayChild>
+
+            <nameChild>Oleg</nameChild>
+            <birthdayChild>29.02.2008</birthdayChild>
+        </childs>
+    </mother>
+
+    <mother id="2">
+        <full_name>
+            <surname>Sidorova</surname>
+            <name>Anna</name>
+        </full_name>
+        <birthday>06.07.1994</birthday>
+        <number_hospital_room>1</number_hospital_room>
+        <childs>
+            <nameChild>Alex</nameChild>
+            <birthdayChild>31.01.2015</birthdayChild>
+        </childs>
+    </mother>
+
+    <mother id="3">
+        <full_name>
+            <surname>Naumova</surname>
+            <name>Svetlana</name>
+        </full_name>
+        <birthday>06.07.1991</birthday>
+        <number_hospital_room>2</number_hospital_room>
+        <childs>
+            <nameChild>Kirill</nameChild>
+            <birthdayChild>22.08.2016</birthdayChild>
+        </childs>
+    </mother>
+</maternity_hospital>
